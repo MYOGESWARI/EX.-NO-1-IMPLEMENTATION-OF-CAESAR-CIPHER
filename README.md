@@ -17,7 +17,42 @@ STEP-5: Display the cipher text obtained above.
 
 ## PROGRAM:
 
+#include <stdio.h>
+
+#include <string.h> 
+
+#include <ctype.h> 
+
+void main() 
+
+{ 
+
+    char plain[10],cipher[10]; 
+    int key,i,length; 
+    int result; 
+    
+    printf("\n Enter the plain text:"); 
+    scanf("%s", plain); 
+    printf("\n Enter the key value:"); 
+    scanf("%d", &key); 
+    printf("\n \n \t PLAIN TEXt: %s", plain); 
+    printf("\n \n \t ENCRYPTED TEXT:"); 
+    for(i=0, length = strlen(plain); i<length; i++) 
+    { 
+    
+        cipher[i]=plain[i] + key; 
+        if (isupper(plain[i]) && (cipher[i] > 'Z')) 
+        cipher[i] = cipher[i] - 26; 
+        if (islower(plain[i]) && (cipher[i] > 'z')) 
+        cipher[i] = cipher[i] - 26; 
+        printf("%c", cipher[i]);
+    }
+}
+
 ## OUTPUT:
+
+<img width="1918" height="841" alt="image" src="https://github.com/user-attachments/assets/c9d28cc0-b58f-43cb-9ba7-fb1f97a17095" />
+
 
 ## RESULT :
  Thus the implementation of ceasar cipher had been executed successfully.
