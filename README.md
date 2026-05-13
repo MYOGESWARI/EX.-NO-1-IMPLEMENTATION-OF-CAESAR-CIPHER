@@ -17,22 +17,18 @@ STEP-5: Display the cipher text obtained above.
 
 ## PROGRAM:
 
-#include <stdio.h>
+    #include <stdio.h>
+    #include <string.h> 
+    #include <ctype.h> 
 
-#include <string.h> 
+    void main() 
 
-#include <ctype.h> 
-
-void main() 
-
-{ 
+     { 
 
     char plain[10],cipher[10]; 
     int key,i,length; 
-    int result; 
-    
-    printf("\n Enter the plain text:"); 
-    scanf("%s", plain); 
+    int result; <img width="1377" height="677" alt="image" src="https://github.com/user-attachments/assets/fe255091-9004-4796-a5f2-3558fde2d9d3" />
+
     printf("\n Enter the key value:"); 
     scanf("%d", &key); 
     printf("\n \n \t PLAIN TEXt: %s", plain); 
@@ -47,11 +43,11 @@ void main()
         cipher[i] = cipher[i] - 26; 
         printf("%c", cipher[i]);
     }
-}
+    }
 
 ## OUTPUT:
 
-<img width="1918" height="841" alt="image" src="https://github.com/user-attachments/assets/c9d28cc0-b58f-43cb-9ba7-fb1f97a17095" />
+<img width="1377" height="678" alt="Screenshot 2026-05-13 092833" src="https://github.com/user-attachments/assets/6e5a5f7b-0a0e-4b46-84a1-08c63b7134ce" />
 
 
 ## RESULT :
